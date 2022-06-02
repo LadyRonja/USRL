@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="eng-us">
+        <title>Scythe Setup Randomizer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <link rel="stylesheet" href="mystyle.css">
+        <script type = "text/javascript" src="scripts/randomizer.js"></script> 
+        <script type = "text/javascript" src="scripts/pageLoader.js"></script> 
+        <script type = "text/javascript" src="scripts/contentStorage.js"></script> 
+    </head>
+
+    <body onload="applicationStart()">
+        <div id="site-wrapper">
+            <header>
+                <div id="logo-container">   
+                    <h1 id="logo">Unofficial Scythe Randomizer</h1>
+                    <text id="lite-addendum">(Lite)</text>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a onclick="clearContents()" class="header-button">Clear</a></li>
+                        <li><a onclick="loadFactionAndMatComponents()" class="header-button">Load options</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="centering-container">
+                
+                <div id="settings-container">
+
+                </div>
+
+
+                <div id="toggle-options-container">
+                    <p>This is a lite version of a bigger project I'm working on in my free time</p>
+                    <p>The eventual goal is to be able to randomize all aspects and to filter between all options</p>
+                    <p>There is no time table - Please be patient</p>
+                </div>
+
+
+                <div id="randomized-results-container"> 
+                    <h2>Person pressing Randomize is Player 1</h2>
+                </div>
+            </div>
+
+
+            <footer id="footer">
+                <p>Developed by <a href="https://github.com/LadyRonja" target="blank" style="color: white;">LadyRonja</a></p>
+            </footer>
+
+            
+            <div id="elements-library" style="visibility: hidden;">       
+                <!-- Load into variables and then remove from document --> 
+                
+                <!-- Settings for amount of players -->
+                <div id="player-count-settings">
+                    <label for="playerCount">Player Count:</label>
+                        <select name="playerCount" id="count-selector">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+
+                        <!-- Change function in each page? -->
+                        <button id="randomizer-button">Randomize!</button>
+                </div>
+
+                <!-- Fenris factions spoiler button -->
+                <class id="fenris-options-button" onclick="loadFenrisFactions()">
+                    <p>Fenris options</p>
+                </div>
+
+                <!-- Informarion cell -->
+                <template id="info-templete">
+                    <div class="primary">
+                        <span id="playerNum">#</span>
+                        <span id="facMat">Mat + Faction <i id="startPos">(startPos)</i>></span>
+                    </div>
+                    <div id="VesnaMods">
+                        <p>Mods</p>
+                    </div>
+                </template>           
+            </div>
+        </div>
+    </body>
+
+</html>

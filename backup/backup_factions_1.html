@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="eng-us">
+        <title>Scythe Setup Randomizer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <link rel="stylesheet" href="mystyle.css">
+        <script type = "text/javascript" src="logic.js"></script> 
+        <script type = "text/javascript" src="contentStorage.js"></script> 
+    </head>
+
+    <body onload="loadToggleFactionOptions(nonFenrisFactions, true, true)">
+        <div id="site-wrapper">
+            <header>
+                <h1 id="logo">Unofficial Scythe Randomizer</h1>
+                <nav>
+                    <ul>
+                        <li><a href="factionPlusMats.html" class="header-button">Factions & Mats</a></li>
+                        <li><a href="factions.html" class="header-button">Factions</a></li>
+                        <li><a href="playerMats.html"class="header-button">Player Mats</a></li>
+                        <li><a href="structureBonus.html"class="header-button">Structure Bonus</a></li>
+                        <li><a href="airships.html"class="header-button">Airships</a></li>
+                        <li><a href="resolution.html"class="header-button">Resolution</a></li>
+                        <div class="dropdown">
+                            <li class="header-button">
+                                <p class="dropbtn header-button">Rise of Fenris <i class="arrow down"></i></p>
+                                    <div class="dropdown-content">
+                                        <a href="achivements.html">Achievements</a>
+                                        <a href="mechMods.html">Mech Mods</a>
+                                        <a href="infrastructure Mods.html">Infrastructure Mods</a>
+                                        <a href="vesnaAbilites.html">Vesna abilites</a>
+                                        <a href="vesnaAbilitesPlusMech.html">Vesna abilites & mech mods</a>
+                                        <a href="desolation.html">Desolation Tiles</a>
+                                        <a href="miscAdditions.html"class="header-button">Misc Additions</a>
+                                    </div>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+
+
+        <div id="centering-container">
+            
+            <div id="settings">
+                <label for="playerCount">Player Count:</label>
+                    <select name="playerCount" id="count-selector">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+
+                    <!-- Change function in each page? -->
+                    <button id="randomize" onclick="randomizeFactions()">Randomize!</button>
+            </div>
+
+            <div id="toggle-options-container">
+                <p>Toggle options that won't be randomized here</p>
+                
+                <div id="fenris-options" onclick="displayFenrisOptions('factions')">
+                    <p>Fenris options</p>
+                </div>
+            </div>
+
+            <div id="randomized-results">
+                <p>Randomized results go here</p>
+            </div>
+        </div>
+
+
+
+            <footer>
+                <p>Developed by <a href="https://github.com/LadyRonja" target="blank">LadyRonja</a></p>
+            </footer>
+        </div>
+    </body>
+
+</html>

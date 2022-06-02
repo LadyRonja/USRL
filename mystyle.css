@@ -1,0 +1,278 @@
+#site-wrapper{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+html{
+    height: 100%;
+    background-image: url(gfx/bg.jpg);
+    background-position: 65% center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    background-color: rgba(128, 128, 128, 0.3);
+    margin: auto;
+    padding: 2px;
+    font-family:'Times New Roman', Times, serif;
+    min-height: 100%;
+}
+
+
+header{
+    margin-bottom: 20px;
+    width: 100vw;
+}
+
+footer{
+    margin-top: auto;
+    text-shadow: 1px 1px black;
+    color: white;
+    height: min-content;
+    border-top: 2px solid black;
+}
+
+/* Page name and logo display */
+#logo-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#logo{
+    align-items: center;
+    width: min-content;
+    height: min-content;
+
+    margin: 0px;
+    padding-left: 2px;
+
+    /* Ensure content is on a single row */
+    white-space: nowrap;
+    overflow: hidden;
+    font-size:calc(100% + 2vw);
+    margin-top: auto;
+}
+
+#lite-addendum{
+    display: inline-block;
+    font-size: x-large;
+    height: min-content;
+    margin-top: auto;
+}
+
+/* List of links display horizontally */
+header ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 0px;
+
+    list-style: none;
+}
+
+/* Remove default padding from list of links */
+header ul{
+    padding-inline-start: 0px;
+}
+
+.header-button {
+    color: black;
+    text-decoration: none;
+    padding: 2px;
+
+    /* Ensure content is on a single row */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header nav li{
+    background-color: darkgrey;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid black;
+    margin: 2px;
+    height: min-content;
+}
+
+#toggle-options-container{
+    background-color: rgb(114, 114, 114, 0.3);
+    width: 95vw;
+    height: min-content;
+    min-height: 5vw;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+#randomized-results-container{
+    /* background-color: rgb(114, 114, 114,0.3); */
+    width: 95vw;
+    height: 30vw;
+    border: 2px solid black;
+    display: inline-block;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#settings-container label{
+    color: wheat;
+}
+
+#centering-container{
+    background-color: rgb(37, 37, 37,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: min-content;
+}
+
+#fenris-options-button{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    margin: 1vw;
+    height: 80%;
+    margin-left: auto;
+}
+
+.toggle-option{
+    padding: 1vw;
+    margin: 2vw;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+#randomized-results-container{
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vw;
+}
+
+.randomized-info{
+    background-color: rgba(255, 228, 196, 0.8);
+    width: fit-content;
+    min-width: 15vw;
+    height: fit-content;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+
+}
+
+.randomized-info .primary{
+    display: flex;
+    flex-direction: row;
+    padding: 2vw;
+    border-bottom: 2px solid black;
+}
+
+.randomized-info .primary #facMat{
+    padding-left: 2vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    height: min-content;
+    text-align: left;
+}
+
+.randomized-info .primary #playerNum{
+    padding-right: 2vw;
+    padding-left: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.randomized-info span{
+    font-size:5vw;
+    height: min-content;
+    text-align: center;
+}
+
+#VesnaMods{
+    border-bottom: 2px solid black;
+}
+
+.randomized-info #VesnaMods p{
+    font-size: 4vw;
+    text-align: center;
+}
+
+/* On screens that are 500px or more, change the size of the text */
+@media screen and (min-width: 500px) {
+
+    .randomized-info span{
+        font-size: 20px;
+        height: min-content;
+        text-align: center;
+    }
+    .randomized-info #VesnaMods p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .randomized-info .primary #facMat{
+        padding-left: 6px;
+        padding-right: 11px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: min-content;
+        text-align: left;
+    }
+
+    .randomized-info .primary #playerNum{
+        padding-right: 6px;
+        padding-left: 11px;
+        padding-top: 5px;
+        padding-bottom:5px;
+    }
+
+    .randomized-info span{
+        font-size:20px;
+        height: min-content;
+        text-align: center;
+    }
+  }
+
+
+/* Arrows */
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+}
+
+.left {
+transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+}
+
+.up {
+transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);
+}
+
+.down {
+transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+}
