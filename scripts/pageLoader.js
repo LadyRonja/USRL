@@ -21,8 +21,8 @@ function clearContents(){
     settingsRegion.innerHTML = "";
 
     let toggleRegion = document.getElementById("toggle-options-container");
-    toggleRegion.innerHTML = "<p>This is a lite version of a bigger project I'm working on in my free time</p>"
-                             + "<p>The eventual goal is to be able to randomize all aspects and to filter between all options</p>"
+    toggleRegion.innerHTML = "<p>This is a lite version of a bigger project I'm working on in my free time</p> "
+                             + "<p>The eventual goal is to be able to randomize all aspects and to filter between all options</p> "
                              + "<p>There is no time table - Please be patient</p>";
 
     let resultRegion = document.getElementById("randomized-results-container");
